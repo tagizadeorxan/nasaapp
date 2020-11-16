@@ -26,7 +26,7 @@ let Weather = () => {
 
     return (
         <div id="third">
-         <img id="third-tape" src={tape}/>
+         <img id="third-tape" src={tape} alt="tape"/>
             {weather ?
                 <div className="content">
                     <p><span className="black-color">Your current timezone:</span> {weather.timezone}</p>
@@ -48,7 +48,7 @@ let Weather = () => {
                     <p><span className="black-color">UVI:</span> {weather.current.uvi}</p>
                   
                 </div>
-                : <div>Loading</div>}
+                : error? <p>internal error</p> : <div>Loading</div>}
         </div>
     )
 }

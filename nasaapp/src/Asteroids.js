@@ -60,7 +60,7 @@ const Asteroids = () => {
 
     return (
         <div id="second">
-         <img id="second-tape" src={tape}/>
+         <img id="second-tape" src={tape} alt="tape"/>
             {data && page >= 0 ? <div className="content">
                 <h1>Near Earth Objects</h1>
                 <h3>Quantity: {data.length}</h3>
@@ -78,13 +78,13 @@ const Asteroids = () => {
                 
                 <div className="asteroid-buttons">
                 <p><span className="black-color">Page:</span> {page+1}</p>
-                <img onClick={() => setCurrent('prev')} id="prev"  src={rocket}/>
-                <img onClick={() => setCurrent('next')} id="next"  src={rocket}/>
+                <img onClick={() => setCurrent('prev')} id="prev"  src={rocket} alt="prev"/>
+                <img onClick={() => setCurrent('next')} id="next"  src={rocket} alt="next"/>
                 </div>
        
                 
 
-            </div> : <p>Loading</p>
+            </div> : error? <p>internal error</p>:<p>Loading</p>
 
             }
         </div>

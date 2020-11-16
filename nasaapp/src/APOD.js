@@ -24,13 +24,13 @@ const APOD = () => {
 
   return (
    <div id="first">
-       <img id="first-tape" src={tape}/>
+       <img id="first-tape" src={tape} alt="tape"/>
      {data ? <div className="content">
     <img src={data.hdurl} alt="hdphoto" />
     <h3>{data.title}</h3>
     <p>{data.explanation}</p>
     
-</div> : <p>Loading</p>
+</div> : error? <p>internal error</p>: <p>Loading</p>
      
      }
    </div>

@@ -7,13 +7,10 @@ import satelite from './assets/satelite.png'
 const App = () => {
     return (
         <div>
-            <img  src={satelite}/>
+            <img  src={satelite} alt="satelite"/>
             <div className="app-container">
             <APOD/>
-            
-         
             <Asteroids/>
-        
             <Weather/>
         </div>
         </div>
