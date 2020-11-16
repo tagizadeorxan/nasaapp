@@ -20,8 +20,8 @@ const Asteroids = () => {
 
     let getData = () => {
 
-        let today = new Date();
-        let searchDate = today.toISOString().split('T')[0];
+        let myDate = new Date();
+        let searchDate = myDate.getFullYear() + "-" + (myDate.getMonth()+1) + "-" + myDate.getDate()
         setDate(searchDate)
         fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${searchDate}&end_date=${searchDate}&api_key=${key.nasa}`)
             .then(data => data.json())
