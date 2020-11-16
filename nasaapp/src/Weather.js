@@ -8,20 +8,13 @@ let Weather = () => {
     let [error, setError] = useState();
 
     useEffect(() => {
-        getWeather();
-    }, [])
-
-
-    const getWeather = () => {
-        navigator.geolocation.getCurrentPosition(showPosition)
-    }
-
-    const showPosition = (position) => {
-        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${position.coords.latitude}&lon=${position.coords.longitude}&exclude=hourly,daily&appid=${key.weather}`)
+        navigator.geolocation.getCurrentPosition(function(position){
+            fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${position.coords.latitude}&lon=${position.coords.longitude}&exclude=hourly,daily&appid=${key.weather}`)
             .then(data => data.json())
             .then(data => setWeather(data))
             .catch(() => setError(true))
-    }
+        })
+    }, [])
 
 
     return (
