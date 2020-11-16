@@ -1,6 +1,7 @@
 import React, {useEffect,useState} from 'react';
 import './APOD.css';
 import key from './key'
+import tape from './assets/tape.png'
 
 const APOD = () => {
 
@@ -22,7 +23,8 @@ const APOD = () => {
  }
 
   return (
-   <div>
+   <div id="first">
+       <img id="first-tape" src={tape}/>
      {data ? <div className="content">
     <img src={data.hdurl} alt="hdphoto" />
     <h3>{data.title}</h3>
