@@ -73,3 +73,17 @@
     0 100px 80px rgba(0, 0, 0, 0.07)
   ;
 }
+
+
+@media only screen and (max-width: 1800px) {
+  #first {
+    width: 32%;
+    
+  }
+  #second {
+    width: 32%;
+  }
+  #third {
+    width: 32%;
+  }
+}
