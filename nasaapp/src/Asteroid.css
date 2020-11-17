@@ -38,6 +38,7 @@
 }
 
 #second {
+  min-width: 550px;
     transform: rotate(350deg);
     box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.02),
@@ -51,6 +52,7 @@
 }
 
 #first {
+  min-width: 550px;
     transform: rotate(4deg);
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.02),
@@ -63,6 +65,7 @@
 }
 
 #third {
+  min-width: 550px;
     transform: rotate(3deg);
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.02),
