@@ -14,20 +14,18 @@ let NaturalEvents = () => {
 
 
     let getData = () => {
-        fetch('https://eonet.sci.gsfc.nasa.gov/api/v2.1/events').
-            then(data => data.json())
+        fetch('https://eonet.sci.gsfc.nasa.gov/api/v2.1/events')
+            .then(data => data.json())
             .then(data => {
                 if (data.events.length > 1) {
                     setData(data);
                     setPage(0);
                 }
-            })
-            .catch(err => setError(err))
+            }).catch(err => setError(err))
     }
 
 
     let setCurrent = (type) => {
-
         if (data.events.length >= 0) {
             switch (type) {
                 case 'prev':
@@ -41,7 +39,6 @@ let NaturalEvents = () => {
                         setPage(page + 1)
                     }
                     break;
-
                 default:
                     break;
             }
