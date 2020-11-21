@@ -28,7 +28,6 @@ let NaturalEvents = () => {
 
     let setCurrent = (type) => {
 
-        console.log(data.length)
         if (data.events.length >= 0) {
             switch (type) {
                 case 'prev':
@@ -63,7 +62,6 @@ let NaturalEvents = () => {
                        <a href={data.events[page].sources[0].url || 'not exist'}>PDC</a>
                        <p><span className="black-color">ID: </span>{data.events[page].id || 'not exist'}</p>
                        <p><span className="black-color">Date: </span>{new Date(data.events[page].geometries[0].date).toUTCString() || 'not exist'}</p>
-
                        <div className="asteroid-buttons">
                 <p><span className="black-color">Page:</span> {page+1}</p>
                 <img onClick={() => setCurrent('prev')} id="prev"  src={rocket} alt="prev"/>
