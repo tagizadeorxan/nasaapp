@@ -63,17 +63,17 @@ const Asteroids = () => {
          <img id="second-tape" src={tape} alt="tape"/>
             {data && page >= 0 ? <div className="content">
                 <h1>Near Earth Objects</h1>
-                <h3>Quantity: {data.length}</h3>
+                <h3>Quantity: {data.length || 'not exist'}</h3>
                 <h4>Date: {date}</h4>
 
                 <div>
-                    <p><span className="black-color">ID:</span> {data[page].id}</p>
-                    <p><span className="black-color">Name:</span> {data[page].name}</p>
+                    <p><span className="black-color">ID:</span> {data[page].id || 'not exist'}</p>
+                    <p><span className="black-color">Name:</span> {data[page].name || 'not exist'}</p>
                     <p><span className="black-color">Dangerous:</span> {data[page].is_potentially_hazardous_asteroid ? "yes" : "no"}</p>
                     <p><span className="black-color">Centry Object:</span> {data[page].is_sentry_object ? "yes" : "no"}</p>
-                    <p><span className="black-color">Estimated diameter (km):</span> min {data[page].estimated_diameter.kilometers.estimated_diameter_min},
-                  max {data[page].estimated_diameter.kilometers.estimated_diameter_max} </p>
-                    <a href={data[page].nasa_jpl_url}>JPL data</a>
+                    <p><span className="black-color">Estimated diameter (km):</span> min {data[page].estimated_diameter.kilometers.estimated_diameter_min || 'not exist'},
+                  max {data[page].estimated_diameter.kilometers.estimated_diameter_max || 'not exist'} </p>
+                    <a href={data[page].nasa_jpl_url || 'not exist'}>JPL data</a>
                 </div>
                 
                 <div className="asteroid-buttons">

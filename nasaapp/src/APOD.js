@@ -26,9 +26,9 @@ const APOD = () => {
    <div id="first">
        <img id="first-tape" src={tape} alt="tape"/>
      {data ? <div className="content">
-    <img src={data.hdurl} alt="hdphoto" />
-    <h3>{data.title}</h3>
-    <p>{data.explanation}</p>
+    <img src={data.hdurl || 'not exist'} alt="hdphoto" />
+    <h3>{data.title || 'not exist'}</h3>
+    <p>{data.explanation || 'not exist'}</p>
     
 </div> : error? <p>internal error</p>: <p>Loading</p>
      
