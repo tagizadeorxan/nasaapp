@@ -43,7 +43,7 @@ let EarthEpic = () => {
            <p><span className="black-color">identifier: </span>{data.identifier || 'not exist'}</p>
            <p><span className="black-color">exact time: </span>{data.date || 'not exist'}</p>
            <p><span className="black-color"></span></p>
-          <img src={`https://api.nasa.gov/EPIC/archive/natural/${date}/png/${image}.png?api_key=${key.nasa}`}/> 
+          <img src={`https://api.nasa.gov/EPIC/archive/natural/${date}/png/${image}.png?api_key=${key.nasa}`} alt="earth"/> 
           </div>: error ? <p>internal error</p> : <p>Loading</p>
       }
         
